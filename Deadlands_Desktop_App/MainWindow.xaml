@@ -8,6 +8,120 @@
                       WindowStartupLocation="Manual"
                       Left="0" Top="0">
     <Grid>
+        <TabControl>
+            <TabItem Header="Basic">
+                <DockPanel Margin="10">
+                    <Label DockPanel.Dock="Top" HorizontalAlignment="Center" FontFamily="Century" FontSize="20" FontWeight="Bold">Hit Location</Label>
+                    <Rectangle DockPanel.Dock="Top" Height="2" Fill="{DynamicResource AccentColorBrush3}" />
+                    <DockPanel DockPanel.Dock="Top" Margin="5,5,0,0" Height="220">
+                        <StackPanel DockPanel.Dock="Left" Width="100" HorizontalAlignment="Center">
+                            <Button Margin="0,5,0,0" DockPanel.Dock="Left" Width="75" Height="75" Style="{DynamicResource MetroCircleButtonStyle}" Foreground="White" FontFamily="Century" FontSize="25" Background="{DynamicResource AccentColorBrush2}" Name="BtnHit" Click="BtnHit_Click">Hit</Button>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Margin="0,0,5,0" DockPanel.Dock="Left" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" Foreground="White" FontFamily="Century" FontSize="25" Background="{DynamicResource AccentColorBrush2}" Name="BtnMinus2" Click="BtnMinus2_Click">-2</Button>
+                                <Button DockPanel.Dock="Left" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" Foreground="White" FontFamily="Century" FontSize="25" Background="{DynamicResource AccentColorBrush2}" Name="BtnPlus2" Click="BtnPlus2_Click">+2</Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Margin="0,0,5,0" DockPanel.Dock="Left" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" Foreground="White" FontFamily="Century" FontSize="25" Background="{DynamicResource AccentColorBrush2}" Name="BtnPlus4" Click="BtnPlus4_Click">+4</Button>
+                                <Button DockPanel.Dock="Left" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}" Foreground="White" FontFamily="Century" FontSize="25" Background="{DynamicResource AccentColorBrush2}" Name="BtnPlus6" Click="BtnPlus6_Click">+6</Button>
+                            </StackPanel>
+                        </StackPanel>
 
+                        <Border DockPanel.Dock="Left" BorderBrush="{DynamicResource AccentColorBrush3}" BorderThickness="2" Margin="15,5,5,5" CornerRadius="10">
+                            <StackPanel>
+                                <Label HorizontalAlignment="Center" FontFamily="Century" FontSize="16" Name="LblResult">Click Button for Result</Label>
+                                <Rectangle Height="2" Fill="{DynamicResource AccentColorBrush3}" />
+
+                                <Grid Margin="5,5,5,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalAlignment="Right" FontFamily="Century" FontWeight="Bold" FontSize="16" VerticalAlignment="Top">Location:</Label>
+                                    <TextBlock Grid.Column="1" Margin="5,0,0,0" FontFamily="Century" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Name="TxtLocation">-</TextBlock>
+                                </Grid>
+                                <Grid Margin="5,5,5,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalAlignment="Right" FontFamily="Century" FontWeight="Bold" FontSize="16" VerticalAlignment="Top">1 Raise:</Label>
+                                    <TextBlock Grid.Column="1" Margin="5,0,0,0" FontFamily="Century" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Name="Txt1Raise">-</TextBlock>
+                                </Grid>
+                                <Grid Margin="5,5,5,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalAlignment="Right" FontFamily="Century" FontWeight="Bold" FontSize="16" VerticalAlignment="Top">2 Raises:</Label>
+                                    <TextBlock Grid.Column="1" Margin="5,0,0,0" FontFamily="Century" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Name="Txt2Raises">-</TextBlock>
+                                </Grid>
+                                <Grid Margin="5,5,5,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalAlignment="Right" FontFamily="Century" FontWeight="Bold" FontSize="16" VerticalAlignment="Top">3 Raises:</Label>
+                                    <TextBlock Grid.Column="1" Margin="5,0,0,0" FontFamily="Century" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Name="Txt3Raises">-</TextBlock>
+                                </Grid>
+                                <Grid Margin="5,5,5,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label HorizontalAlignment="Right" FontFamily="Century" FontWeight="Bold" FontSize="16" VerticalAlignment="Top">Armor?:</Label>
+                                    <TextBlock Grid.Column="1" Margin="5,0,0,0" FontFamily="Century" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Name="TxtArmor">-</TextBlock>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </DockPanel>
+                    <Label DockPanel.Dock="Top" HorizontalAlignment="Center" FontFamily="Century" FontSize="20" FontWeight="Bold">Charts</Label>
+                    <Rectangle DockPanel.Dock="Top" Height="2" Fill="{DynamicResource AccentColorBrush3}" />
+                    <ScrollViewer DockPanel.Dock="Top" Height="Auto" Margin="0,10,0,10">
+                        <StackPanel HorizontalAlignment="Center">
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/armor.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/hitlocation.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/calledshots.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/fightmodifiers.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/shootingmodifiers.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/speedload.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/stunrecovery.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/lockpickin.jpg" />
+                            <Image Width="350" Margin="0,5,0,0" Source="Images/tracking.jpg" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Marshall">
+                <DockPanel Margin="10">
+                    <Label DockPanel.Dock="Top" HorizontalAlignment="Center" FontFamily="Century" FontSize="20" FontWeight="Bold">Dice Roller</Label>
+                    <Rectangle DockPanel.Dock="Top" Height="2" Fill="{DynamicResource AccentColorBrush3}" />
+                    <Grid DockPanel.Dock="Top" Margin="5,5,5,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox VerticalAlignment="Top" Margin="5" FontSize="16" FontFamily="Century" Controls:TextBoxHelper.Watermark="Enter Roll Here (ie: 3d8)" Controls:TextBoxHelper.ClearTextButton="True" Name="TxtCustomRoll" ></TextBox>
+                        <Button IsDefault="True" Grid.Column="1" Margin="0,5,5,5" VerticalAlignment="Top" Style="{DynamicResource AccentedSquareButtonStyle}" Foreground="White" FontFamily="Century" Background="{DynamicResource AccentColorBrush2}" Name="BtnCustomRoll" Click="BtnCustomRoll_Click">Roll it!</Button>
+                    </Grid>
+                    <Border DockPanel.Dock="Top" BorderBrush="{DynamicResource AccentColorBrush3}" BorderThickness="2" Margin="0,5,0,5" CornerRadius="10" Height="200" VerticalAlignment="Top">
+                        <ScrollViewer>
+                            <TextBlock FontFamily="Century" Margin="5" FontSize="14" Name="BlockCustomRollResult" />
+                        </ScrollViewer>
+                        
+                    </Border>
+                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 5, 0, 0">
+                        <Image Source="Images/scart.JPG" Width="250" />
+                        <StackPanel>
+                            <Button Margin="5,5,5,0" Style="{DynamicResource AccentedSquareButtonStyle}" Foreground="White" FontFamily="Century" Background="{DynamicResource AccentColorBrush2}" Click="BtnRolLScart_Click" Tag="1">Roll Scart 3</Button>
+                            <Button Margin="5,5,5,0" Style="{DynamicResource AccentedSquareButtonStyle}" Foreground="White" FontFamily="Century" Background="{DynamicResource AccentColorBrush2}" Click="BtnRolLScart_Click" Tag="2">Roll Scart 5</Button>
+                            <Button Margin="5,5,5,0" Style="{DynamicResource AccentedSquareButtonStyle}" Foreground="White" FontFamily="Century" Background="{DynamicResource AccentColorBrush2}" Click="BtnRolLScart_Click" Tag="3">Roll Scart 7</Button>
+                            <Button Margin="5,5,5,0" Style="{DynamicResource AccentedSquareButtonStyle}" Foreground="White" FontFamily="Century" Background="{DynamicResource AccentColorBrush2}" Click="BtnRolLScart_Click" Tag="4">Roll Scart 9</Button>
+                            <Button Margin="5,5,5,0" Style="{DynamicResource AccentedSquareButtonStyle}" Foreground="White" FontFamily="Century" Background="{DynamicResource AccentColorBrush2}" Click="BtnRolLScart_Click" Tag="5">Roll Scart 11</Button>
+                            <Button Margin="5,5,5,0" Style="{DynamicResource AccentedSquareButtonStyle}" Foreground="White" FontFamily="Century" Background="{DynamicResource AccentColorBrush2}" Click="BtnRolLScart_Click" Tag="6">Roll Scart 13</Button>
+                        </StackPanel>
+                    </StackPanel>
+                </DockPanel>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Controls:MetroWindow>

@@ -71,6 +71,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Helpers.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -103,6 +104,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\scart.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calledshots.jpg" />
+    <Resource Include="Images\fightmodifiers.jpg" />
+    <Resource Include="Images\hitlocation.jpg" />
+    <Resource Include="Images\lockpickin.jpg" />
+    <Resource Include="Images\shootingmodifiers.jpg" />
+    <Resource Include="Images\speedload.jpg" />
+    <Resource Include="Images\stunrecovery.jpg" />
+    <Resource Include="Images\tracking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\armor.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
